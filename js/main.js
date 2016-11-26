@@ -11,6 +11,15 @@ window.Erro.Carousel = {
         this.options.container = document.getElementById('products');
         this.options.reference = document.getElementsByClassName('reference')[0];
         this.options.pagination = document.getElementById('pagination');
+
+        if(isMobile.phone) {
+            this.options.items = 1;
+        }
+
+        if(isMobile.tablet) {
+            this.options.items = 2;
+        }
+
         this.clearContainer();
         this.requestProducts();
     },
@@ -87,7 +96,7 @@ window.Erro.Carousel = {
         this.options.liWidth = document.getElementsByClassName('product-inner')[0].offsetWidth;
         this.options.container.style.width = this.options.liWidth * this.options.total + 1 + 'px';
 
-        var pages = Math.ceil(this.options.total / 3);
+        var pages = Math.ceil(this.options.total / this.options.items);
         for (var i = 0; i < pages; i++) {
             var li = document.createElement('li');
 
@@ -107,12 +116,12 @@ window.Erro.Carousel = {
         var page = this.getAttribute('data-page');
         window.Erro.Carousel.changeActive(page)
 
-        var total = window.Erro.Carousel.options.liWidth * 3;
+        var total = window.Erro.Carousel.options.liWidth * window.Erro.Carousel.options.items;
         var elementWidth = window.Erro.Carousel.options.container.offsetWidth;
         var moveTo = page * total;
 
         if ((total + moveTo) > elementWidth) {
-            var remainder = window.Erro.Carousel.options.total % 3;
+            var remainder = window.Erro.Carousel.options.total % window.Erro.Carousel.options.items;
             var rest = (3 - remainder) * window.Erro.Carousel.options.liWidth;
             moveTo = moveTo - rest;
         }
@@ -122,10 +131,10 @@ window.Erro.Carousel = {
     changeActive: function (page) {
         var elems = document.querySelectorAll("#pagination li a");
 
-        elems.forEach.call(elems, function(el) {
+        elems.forEach.call(elems, function (el) {
             el.classList.remove("active");
 
-            if(el.getAttribute('data-page') == page) {
+            if (el.getAttribute('data-page') == page) {
                 el.classList.add("active");
             }
         })
