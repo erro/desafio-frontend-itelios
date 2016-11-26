@@ -49,7 +49,8 @@ h3, h4, h5, h6 {
 
 #products {
 	list-style: none;
-	padding: 0
+	padding: 0;
+	overflow: hidden;
 }
 
 .product-inner {
@@ -172,6 +173,40 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 /* ----------- /PRODUCTS -------------*/
 /* -----------------------------------*/
+
+/* -----------------------------------*/
+/* ----------- PAGINATION ------------*/
+/* -----------------------------------*/
+#pagination {
+	width: 100%;
+	text-align: center;
+	padding: 0;
+}
+
+#pagination li {
+	list-style: none;
+	display: inline-block;
+}
+
+#pagination a {
+	background: #adadad;
+	width: 11px;
+	height: 11px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+#pagination a:hover,
+#pagination .active {
+	background: #353f4f;
+}
+/* -----------------------------------*/
+/* ---------- /PAGINATION ------------*/
+/* -----------------------------------*/
+
+
 
 
 /* -----------------------------------*/
