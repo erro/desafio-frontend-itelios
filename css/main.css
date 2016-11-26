@@ -1,4 +1,32 @@
+/* -----------------------------------*/
+/* -------------- RESET --------------*/
+/* -----------------------------------*/
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset {
+	margin: 0;
+	padding: 0;
+}
 
+img, fieldset {
+	border: 0;
+}
+
+/* set image max width to 100% */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+/* -----------------------------------*/
+/* ------------- /RESET --------------*/
+/* -----------------------------------*/
 
 
 /* -----------------------------------*/
@@ -36,6 +64,12 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 /* ------------ PRODUCTS -------------*/
 /* -----------------------------------*/
+
+.container {
+	width: 100%;
+}
+
+
 /* basic setup */
 .container-products {
 	float: left;
@@ -43,8 +77,10 @@ h3, h4, h5, h6 {
 	width: 901px
 }
 
+.product-fixed h2,
 .container-products h2 {
-	color: #5e6774
+	color: #5e6774;
+	margin-bottom: 20px;
 }
 
 #products {
@@ -80,18 +116,19 @@ h3, h4, h5, h6 {
 /* product link */
 .product-link {
 	background: rgb(255,255,255);
+	display: block;
 	text-decoration: none;
 	color: #303132;
 	border: 1px solid #edeaea;
 	border-right: none;
 	padding: 25px;
-	display: block;
+	min-height: 340px;
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 }
 
-#products li:last-child {
+#products li:last-child a {
 	border-right: 1px solid #edeaea;
 }
 
@@ -116,12 +153,13 @@ h3, h4, h5, h6 {
 	font-size: 16px;
 	font-weight: 400;
 	font-family: 'Roboto', sans-serif;
+	margin: 15px 0;
 }
 /* /product title */
 
 /* price */
-.product-price {
-
+.product-price { 
+	margin: 10px 0;
 }
 
 .product-price strong {
@@ -181,6 +219,7 @@ h3, h4, h5, h6 {
 /* ----------- /PRODUCTS -------------*/
 /* -----------------------------------*/
 
+
 /* -----------------------------------*/
 /* ----------- PAGINATION ------------*/
 /* -----------------------------------*/
@@ -188,6 +227,7 @@ h3, h4, h5, h6 {
 	width: 100%;
 	text-align: center;
 	padding: 0;
+	margin-top: 20px;
 }
 
 #pagination li {
@@ -215,15 +255,21 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 
 
-
-
 /* -----------------------------------*/
 /* ------------ RESPONSIVE -----------*/
 /* -----------------------------------*/
 @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 736px) {
-	
+
+	.product-link {
+		border: 1px solid #edeaea;
+}
+
+	#products li:last-child a {
+		
+}
+
 }
 /* -----------------------------------*/
 /* ----------- /RESPONSIVE -----------*/
