@@ -271,10 +271,6 @@ h3, h4, h5, h6 {
 		border: 1px solid #edeaea;
 	}
 
-	#products li:last-child a {
-		
-	}
-
 	.container-products {
 		margin-top: 40px;
 	}
@@ -282,12 +278,36 @@ h3, h4, h5, h6 {
 	.container-products {
 		width: 100%;
 	}
+
+	.product-fixed,
+	.product-fixed .product-link,
+	.product-inner {
+		width: auto;
+	}
+
+	#products .product-inner {
+		width: 9.8%
+	}
 	
 	.add-cart {
 		display: block;
 	}
 
 }
+
+@media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1023px) {
+		body {
+			padding: 10px;
+		}
+		.container-products {
+			width: 302px;
+		}
+		.add-cart {
+			display: block;
+		}
+    }
 /* -----------------------------------*/
 /* ----------- /RESPONSIVE -----------*/
 /* -----------------------------------*/

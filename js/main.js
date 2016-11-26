@@ -12,12 +12,8 @@ window.Erro.Carousel = {
         this.options.reference = document.getElementsByClassName('reference')[0];
         this.options.pagination = document.getElementById('pagination');
 
-        if(isMobile.phone) {
+        if(isMobile.phone || isMobile.tablet) {
             this.options.items = 1;
-        }
-
-        if(isMobile.tablet) {
-            this.options.items = 2;
         }
 
         this.clearContainer();
