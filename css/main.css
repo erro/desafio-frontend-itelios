@@ -36,7 +36,18 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 /* ------------ PRODUCTS -------------*/
 /* -----------------------------------*/
-.products {
+/* basic setup */
+.container-products {
+	float: left;
+	overflow: hidden;
+	width: 901px
+}
+
+.container-products h2 {
+	color: #5e6774
+}
+
+#products {
 	list-style: none;
 	padding: 0
 }
@@ -49,14 +60,7 @@ h3, h4, h5, h6 {
 .product-fixed {
 	float: left;
 }
-
-.container-products {
-	float: left;
-}
-
-h2 {
-	color: #5e6774
-}
+/* /basic setup */
 
 /* product image */
 .product-image {
@@ -81,7 +85,7 @@ h2 {
 	transition:all 0.3s ease;
 }
 
-.products li:last-child {
+#products li:last-child {
 	border-right: 1px solid #edeaea;
 }
 
