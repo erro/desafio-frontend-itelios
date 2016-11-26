@@ -40,6 +40,10 @@ body, html {
 	text-align: left;
 }
 
+.container {
+	width: 100%;
+	overflow: hidden;
+}
 /* -----------------------------------*/
 /* ---------- /GENERAL SETUP ---------*/
 /* -----------------------------------*/
@@ -53,9 +57,7 @@ h1 {
 	font-weight: 700;
 }
 
-h3, h4, h5, h6 {
-
-}
+h2, h3, h4, h5, h6 {  }
 /* -----------------------------------*/
 /* -------------- /TYPO --------------*/
 /* -----------------------------------*/
@@ -64,11 +66,6 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 /* ------------ PRODUCTS -------------*/
 /* -----------------------------------*/
-
-.container {
-	width: 100%;
-	overflow: hidden;
-}
 
 /* basic setup */
 .container-products {
@@ -259,6 +256,7 @@ h3, h4, h5, h6 {
 /* -----------------------------------*/
 /* ------------ RESPONSIVE -----------*/
 /* -----------------------------------*/
+/* mobile */
 @media only screen
     and (min-device-width : 320px)
     and (max-device-width : 736px) {
@@ -294,10 +292,12 @@ h3, h4, h5, h6 {
 	}
 
 }
+/* /mobile */
 
+/* tablet */
 @media only screen
     and (min-device-width : 768px)
-    and (max-device-width : 1023px) {
+    and (max-device-width : 1024px) {
 		body {
 			padding: 10px;
 		}
@@ -308,6 +308,16 @@ h3, h4, h5, h6 {
 			display: block;
 		}
     }
+
+@media only screen 
+	and (min-device-width : 768px) 
+	and (max-device-width : 1024px) 
+	and (orientation : landscape) {
+		.container-products {
+			width: 603px;
+		}
+}
+/* /tablet */
 /* -----------------------------------*/
 /* ----------- /RESPONSIVE -----------*/
 /* -----------------------------------*/
