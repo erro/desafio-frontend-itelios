@@ -51,6 +51,9 @@ h3, h4, h5, h6 {
 	list-style: none;
 	padding: 0;
 	overflow: hidden;
+	transition: 2s;
+	-webkit-transition: 2s;
+	-moz-transition: 2s;
 }
 
 .product-inner {
@@ -83,7 +86,9 @@ h3, h4, h5, h6 {
 	border-right: none;
 	padding: 25px;
 	display: block;
-	transition:all 0.3s ease;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
 }
 
 #products li:last-child {
@@ -159,6 +164,8 @@ h3, h4, h5, h6 {
 	height: 45px;
 	background: #ff6600;
 	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
 }
 
 .add-cart:hover:before {
@@ -186,6 +193,7 @@ h3, h4, h5, h6 {
 #pagination li {
 	list-style: none;
 	display: inline-block;
+	margin: 0 4px;
 }
 
 #pagination a {
